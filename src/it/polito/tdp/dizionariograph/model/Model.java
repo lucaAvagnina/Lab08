@@ -57,13 +57,11 @@ public class Model {
 
 	public String findMaxDegree() {
 		int max = 0;
-		List<String> maxNeighbours = new LinkedList<String>();
 		String parolaMax = null; 
 		for(String s : this.grafo.vertexSet()) {
 			int grado = grafo.degreeOf(s);
 			if(grado > max) {
 				max = grado;
-				maxNeighbours = this.displayNeighbours(s);
 				parolaMax = s;
 			}
 		}
